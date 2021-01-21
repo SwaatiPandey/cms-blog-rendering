@@ -12,7 +12,7 @@ export default function Home(props) {
     <>
       <div className={styles.container}>
         <Header header={props.header} />
-        <h1>"Take a good book to bed with you — books do not snore.” </h1>
+        <h1>"When You watch Anime or read Manga you go into a different world!!” </h1>
         <div className={styles.cardContainer}>
           {blogs.map((banner, i) => {
             return (
