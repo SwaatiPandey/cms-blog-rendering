@@ -3,7 +3,7 @@ import styles from "../styles/Home.module.css";
 import Header from "../components/header";
 import Footer from "../components/footer";
 //query
-import getAllBlogs from "../contentstack/queries/getAllBlogs";
+import getAllBlogs from "../fetchQueries/getAllBlogs";
 
 //function to display home page
 export default function Home(props) {
