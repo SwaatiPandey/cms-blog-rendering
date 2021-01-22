@@ -1,6 +1,6 @@
 import Stack from "../stack";
 export default function getBlogById(entry_id) {
-  const Query = Stack.ContentType("blogrenderingnext_rutuja").Entry(entry_id);
+  const Query = Stack.ContentType("blog_cms_swati").Entry(entry_id);
   let entry = Query.fetch()
     .then(
       function success(entry) {

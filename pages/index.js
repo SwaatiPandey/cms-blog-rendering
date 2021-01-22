@@ -1,7 +1,7 @@
 import Link from "next/link";
-//import styles from "../styles/Home.module.css";
-import Header from "..//components/navigation";
+import styles from "../styles/Home.module.css";
 import Footer from "../components/footer";
+import Navigation from "../components/navigation";
 //query
 import getAllBlogs from "../fetchEnteries/allEnteries";
 
@@ -11,18 +11,18 @@ export default function Home(props) {
   return (
     <>
       <div className={styles.container}>
-        <Header header={props.navigation} />
+        <Navigation navigation={props.navigation} />
         <h1>"When You watch Anime or read Manga you go into a different world!!” </h1>
         <div className={styles.cardContainer}>
           {blogs.map((banner, i) => {
             return (
               <div>
                 <div key={i}>
-                  <Link href={"/blog/" + banner.uid}>
+                  <Link href={"/" + banner.uid}>
                     <a>
                       <div className={styles.card}>
                         <img
-                          src={banner.blogimage.url}
+                          src={banner.image.url}
                           alt={props.banner.blogtitle}
                         />
                       </div>
@@ -39,11 +39,11 @@ export default function Home(props) {
   );
 }
 export const getStaticProps = async () => {
-  const header = await getAllBlogs("01_blognavigation_rutuja");
-  const banner = await getAllBlogs("blogrenderingnext_rutuja");
-  const footer = await getAllBlogs("01_blogfooter_rutuja");
+  const navigation = await getAllBlogs("blog_navigation_swati");
+  const banner = await getAllBlogs("blog_cms_swati");
+  const footer = await getAllBlogs("blog_footer_swati");
 
   return {
-    props: { header: [...header], banner: [...banner[0]], footer: [...footer] },
+    props: { navigation: {...navigation}, banner: [...banner[0]], footer: [...footer] },
   };
 };

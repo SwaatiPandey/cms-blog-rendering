@@ -2,7 +2,7 @@ module.exports =
 {
     env:{
         API_KEY: "blte685dad492ce6905",
-        DELIVERY_TOKEN: "csf316fbd9a21cfb91b7b31960",
+        DELIVERY_TOKEN: "cs725c83dda69619af8e8c5a7e",
         ENVIRONMENT_NAME: "development"
     }
     
