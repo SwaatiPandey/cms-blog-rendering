@@ -23,7 +23,7 @@ export default function Home(props) {
               <h1>{blog.title}</h1>
               <img src={blog.image.url} alt={blog.blogtitle} />
               <p>{blog.content}</p>
-              <h2>Links:</h2>
+              <h2>Related Links:</h2>
               <div>
               {blog.related_links.map((links) => {
                 // console.log(links);
