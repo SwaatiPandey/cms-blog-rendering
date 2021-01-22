@@ -1,9 +1,9 @@
 import Link from "next/link";
-import styles from "../styles/Home.module.css";
-import Header from "../components/header";
+//import styles from "../styles/Home.module.css";
+import Header from "..//components/navigation";
 import Footer from "../components/footer";
 //query
-import getAllBlogs from "../fetchQueries/getAllBlogs";
+import getAllBlogs from "../fetchEnteries/allEnteries";
 
 //function to display home page
 export default function Home(props) {
@@ -11,7 +11,7 @@ export default function Home(props) {
   return (
     <>
       <div className={styles.container}>
-        <Header header={props.header} />
+        <Header header={props.navigation} />
         <h1>"When You watch Anime or read Manga you go into a different world!!” </h1>
         <div className={styles.cardContainer}>
           {blogs.map((banner, i) => {

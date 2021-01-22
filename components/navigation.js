@@ -1,14 +1,14 @@
 import Link from "next/link";
-import styles from "../styles/header.module.css";
-function Header(props) {
-  let header = props.header[0][0];
+// import styles from "../styles/header.module.css";
+function Navigation(props) {
+  let header = props.navigation[0][0];
   return (
     <div>
       <div className={styles.container}>
         <Link href="/">
           <div className={styles.logo}>
             <img
-              src={header.company_logo.url}
+              src={navigation.company_logo.url}
               alt="logo"
               width={70}
               height={70}
@@ -16,7 +16,7 @@ function Header(props) {
           </div>
         </Link>
         <div className={styles.links}>
-          {header.link.map((link) => {
+          {navigation.link.map((link) => {
             return (
               <div>
                 <Link href={link.href}>
@@ -31,4 +31,4 @@ function Header(props) {
   );
 }
 
-export default Header;
+export default Navigation;
