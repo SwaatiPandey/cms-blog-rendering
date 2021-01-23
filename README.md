@@ -33,12 +33,11 @@ For BACKEND : "contentstack"
 
 FRONTEND: It has following folders:Components, which contains footer and navigation bar. fetchEnteries folder conatins contentstack function to fetch data.Pages contains index and [id] page. stack contains contentstack method. style contains css for the pages and navigation and footer.
 
-4.Demo: This is the link of hosted backend: 
-https://blog-backend-hosting.herokuapp.com/blogs
 
-This is the link of project :-https://blog-rendering-using-react.swaatipandey.vercel.app/
+This is the link of project :-   https://cms-blog-rendering-three.vercel.app/
 
-5.Technologies Used: 
+
+4.Technologies Used: 
   FRONTEND: Next js
   BACKEND : contentstack
 
