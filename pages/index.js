@@ -5,7 +5,7 @@ import Navigation from "../components/navigation";
 //query
 import getAllBlogs from "../fetchEnteries/allEnteries";
 
-//function to display home page
+//function for displaying home page
 export default function Home(props) {
   let blogs = props.banner;
   return (
