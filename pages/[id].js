@@ -13,10 +13,13 @@ export default function Home(props) {
   return (
     <>
       <div className={styles.container}>
-        <Navigation navigation={props.navigation} />
-        <h1>
+        <div className={styles.bannerImg}>
+          <Navigation navigation={props.navigation} />
+
+          {/* <h1>
           "When You watch Anime or read Manga you go into a different world!!”
-        </h1>
+        </h1> */}
+        </div>
         <div className={styles.cardContainer}>
           <div>
             <div className={styles.card}>
@@ -25,24 +28,23 @@ export default function Home(props) {
               <p>{blog.content}</p>
               <h2>Related Links:</h2>
               <div>
-              {blog.related_links.map((links) => {
-                // console.log(links);
-                return (
-                  <div className={styles["relLinks"]}>
-                    <Link href={`${links.related_blog[0].uid}`}>
-                     <p> {links.title}</p>
-                    </Link>
-                  </div>
-                );
-              })}
+                {blog.related_links.map((links) => {
+                  // console.log(links);
+                  return (
+                    <div className={styles["relLinks"]}>
+                      <Link href={`${links.related_blog[0].uid}`}>
+                        <p> {links.title}</p>
+                      </Link>
+                    </div>
+                  );
+                })}
+              </div>
             </div>
-         
-            </div>
-    
           </div>
         </div>
-        <Footer footer={props.footer} />
       </div>
+
+      <Footer footer={props.footer} />
     </>
   );
 }
